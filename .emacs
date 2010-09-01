@@ -12,6 +12,8 @@
 (setq query-replace-highlight    t) ; Highlight query object 
 (setq mouse-sel-retain-highlight t) ; Keep mouse high-lightening 
 
-(set-face-background 'region "yellow") ; Set region background color 
-(set-background-color        "wheat3") ; Set emacs bg color 
+;; (set-face-background 'region "yellow") ; Set region background color 
+;; (set-background-color        "wheat3") ; Set emacs bg color 
+
+(global-set-key "\C-l" 'goto-line) ; [Ctrl]-[L]
 
