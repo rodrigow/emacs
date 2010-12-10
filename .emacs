@@ -23,3 +23,10 @@
 (require 'slime) 
 (slime-setup)
 
+; syntax highlighting
+(global-font-lock-mode t)
+; highlight open parenthesis
+(show-paren-mode 1)
+; return will ident when return hit (just for lisp)
+(add-hook 'lisp-mode-hook '(lambda ()
+      (local-set-key (kbd "RET") 'newline-and-indent)))
