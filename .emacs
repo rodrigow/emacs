@@ -16,3 +16,10 @@
 ;; (set-background-color        "wheat3") ; Set emacs bg color 
 
 ;; (global-set-key "\C-l" 'goto-line) ; [Ctrl]-[L]
+
+;;; Lisp (SLIME) interaction 
+(setq inferior-lisp-program "clisp") 
+(add-to-list 'load-path "~/.slime") 
+(require 'slime) 
+(slime-setup)
+
