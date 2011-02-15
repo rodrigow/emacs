@@ -12,11 +12,6 @@
 (setq query-replace-highlight    t) ; Highlight query object 
 (setq mouse-sel-retain-highlight t) ; Keep mouse high-lightening 
 
-;; (set-face-background 'region "yellow") ; Set region background color 
-;; (set-background-color        "wheat3") ; Set emacs bg color 
-
-;; (global-set-key "\C-l" 'goto-line) ; [Ctrl]-[L]
-
 ; syntax highlighting
 (global-font-lock-mode t)
 ; highlight open parenthesis
@@ -40,3 +35,9 @@
 ;; default shell ansi mode
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+;; interating with clipboard
+(global-set-key "\C-w" 'clipboard-kill-region)
+(global-set-key "\M-w" 'clipboard-kill-ring-save)
+(global-set-key "\C-y" 'clipboard-yank)
+
