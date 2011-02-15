@@ -41,3 +41,5 @@
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-y" 'clipboard-yank)
 
+;; slime key binding
+(global-set-key (quote [s-tab]) (quote slime-complete-symbol))
