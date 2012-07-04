@@ -1,7 +1,11 @@
+(package-initialize)
+
 (setq default-frame-alist (append (list 
   '(width  . 100)  ; Width set to 81 characters 
   '(height . 35)) ; Height set to 60 lines 
   default-frame-alist)) 
+
+(ido-ubiquitous 1)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
 (setq make-backup-files         nil) ; Don't want any backup files 
@@ -40,3 +44,5 @@
 
 ;; slime key binding
 (global-set-key (quote [s-tab]) (quote slime-complete-symbol))
+
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
