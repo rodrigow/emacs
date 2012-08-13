@@ -30,6 +30,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ido-mode (quote both) nil (ido))
+ '(speedbar-show-unknown-files t)
  '(x-select-enable-clipboard t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
