@@ -6,6 +6,7 @@
   default-frame-alist)) 
 
 (ido-ubiquitous 1)
+(scroll-bar-mode -1)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
 (setq make-backup-files         nil) ; Don't want any backup files 
