@@ -1,4 +1,5 @@
 (package-initialize)
+(add-to-list 'load-path "~/.emacs.d/el/")
 
 (setq default-frame-alist (append (list 
   '(width  . 100)  ; Width set to 81 characters 
@@ -48,3 +49,7 @@
 (global-set-key (quote [s-tab]) (quote slime-complete-symbol))
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; Speedbar
+(require 'sr-speedbar)
+(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
