@@ -6,7 +6,7 @@
   '(height . 35)) ; Height set to 60 lines 
   default-frame-alist)) 
 
-(ido-ubiquitous 1)
+; (ido-ubiquitous 1)
 (scroll-bar-mode -1)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
