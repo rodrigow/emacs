@@ -7,7 +7,9 @@
   default-frame-alist)) 
 
 ; (ido-ubiquitous 1)
-(scroll-bar-mode -1)
+(when (display-graphic-p)
+  (scroll-bar-mode -1))
+
 (load-theme 'tango-dark t)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
