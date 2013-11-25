@@ -1,16 +1,9 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/el/")
 
-(setq default-frame-alist (append (list 
-  '(width  . 100)  ; Width set to 81 characters 
-  '(height . 35)) ; Height set to 60 lines 
-  default-frame-alist)) 
-
 ; (ido-ubiquitous 1)
 (when (display-graphic-p)
   (scroll-bar-mode -1))
-
-(load-theme 'tango-dark t)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
 (setq make-backup-files         nil) ; Don't want any backup files 
@@ -48,8 +41,20 @@
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
-;; slime key binding
-(global-set-key (quote [s-tab]) (quote slime-complete-symbol))
+;; comment/uncomment lines
+(defun comment-or-uncomment-region-or-line ()
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+	(setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)
+    (next-logical-line)))
+
+;; key binding
+(global-set-key (quote [s-tab]) (quote slime-complete-symbol)) ; slime
+(global-set-key [4194351] (quote comment-or-uncomment-region-or-line)) ; comment/uncomment
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
