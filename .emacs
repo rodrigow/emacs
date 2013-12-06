@@ -1,9 +1,16 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/el/")
 
+(setq default-frame-alist (append (list 
+  '(width  . 120)  ; Width set to 81 characters 
+  '(height . 40)) ; Height set to 60 lines 
+  default-frame-alist)) 
+
 ; (ido-ubiquitous 1)
 (when (display-graphic-p)
   (scroll-bar-mode -1))
+
+(load-theme 'tango-dark t)
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
 (setq make-backup-files         nil) ; Don't want any backup files 
@@ -23,18 +30,19 @@
 (add-hook 'lisp-mode-hook '(lambda ()
       (local-set-key (kbd "RET") 'newline-and-indent)))
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ido-mode (quote both) nil (ido))
  '(speedbar-show-unknown-files t)
+ '(tool-bar-mode nil)
  '(x-select-enable-clipboard t))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 ;; default shell ansi mode
