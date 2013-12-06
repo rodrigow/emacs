@@ -11,6 +11,7 @@
   (scroll-bar-mode -1))
 
 (load-theme 'tango-dark t)
+(setq ring-bell-function 'ignore) ; Don't want beep or bell sound
 
 (setq inhibit-startup-message   t)   ; Don't want any startup message 
 (setq make-backup-files         nil) ; Don't want any backup files 
