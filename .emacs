@@ -54,7 +54,7 @@
 
 ;; key binding
 (global-set-key (quote [s-tab]) (quote slime-complete-symbol)) ; slime
-(global-set-key [4194351] (quote comment-or-uncomment-region-or-line)) ; comment/uncomment
+(global-set-key (kbd "s-/") (quote comment-or-uncomment-region-or-line)) ; comment/uncomment
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
