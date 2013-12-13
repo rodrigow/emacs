@@ -1,2 +1,2 @@
 #!/bin/bash
-/Applications/Emacs.app/Contents/MacOS/Emacs -nw
+/Applications/Emacs.app/Contents/MacOS/Emacs -nw $@
