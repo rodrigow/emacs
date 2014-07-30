@@ -64,6 +64,7 @@
 ;; key binding
 (global-set-key (quote [s-tab]) (quote slime-complete-symbol)) ; slime
 (global-set-key (kbd "s-/") (quote comment-or-uncomment-region-or-line)) ; comment/uncomment
+(global-set-key (kbd "C-;") (quote join-line)) ; join lines
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
