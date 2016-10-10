@@ -69,5 +69,5 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;; Speedbar
-(require 'sr-speedbar)
-(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
+;; (require 'sr-speedbar)
+;; (global-set-key (kbd "M-s") 'sr-speedbar-toggle)
