@@ -47,8 +47,8 @@
  )
 
 ;; default shell ansi mode
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+;; (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+;; (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; comment/uncomment lines
 (defun comment-or-uncomment-region-or-line ()
